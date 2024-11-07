@@ -1,4 +1,4 @@
-# Ignoring directories inside "My project"
+# Ignoring directories inside "PlatformerGame"
 /PlatformerGame/[Ll]ibrary/
 /PlatformerGame/[Tt]emp/
 /PlatformerGame/[Oo]bj/
