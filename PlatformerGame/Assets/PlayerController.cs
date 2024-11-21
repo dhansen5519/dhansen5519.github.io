@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     public float moveSpeed = 5f; // Speed at which the player moves horizontally
-    public float jumpForce = 10f; // Force applied when the player jumps
+    public float jumpForce = 5f; // Force applied when the player jumps
 
     [Header("Ground Check")]
     public Transform groundCheck; // Empty GameObject used to check if the player is grounded
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
     // State variables
     private bool isGrounded;      // Whether the player is currently on the ground
     private bool isFacingRight = true; // Whether the player is facing right (true) or left (false)
+    private bool isDead = false; // Whether the player is dead
+    public float deathDelay = 2f;
 
 
     // Start is called before the first frame update
@@ -32,6 +35,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDead) return; // Prevent movement if the player is dead
         // Call movement and jump methods every frame
         Move();
         Jump();
@@ -94,5 +98,32 @@ public class PlayerController : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
+    }
+
+    public void Die()
+    {
+        if (isDead) return; // Prevent multiple triggers
+        isDead = true;
+
+        // Trigger the "Dead" animation
+        animator.SetTrigger("Dead");
+
+        // Stop all movement
+        rb.velocity = Vector2.zero;
+        rb.isKinematic = true; // Makes the Rigidbody static
+        rb.simulated = false; // Disables Rigidbody physics
+
+        StartCoroutine(LoadGameOverMenu());
+
+    }
+
+    // IEnumerator used with coroutines to introduce delays. In this case it allows the 
+    // death animation to occur befor the Game Over Menu is triggered
+    private IEnumerator LoadGameOverMenu() 
+    {
+        // Store the current level name in the static variable
+        GameOverMenu.lastLevelName = SceneManager.GetActiveScene().name;
+        yield return new WaitForSeconds(deathDelay);
+        SceneManager.LoadScene("GameOverMenu");
     }
 }
