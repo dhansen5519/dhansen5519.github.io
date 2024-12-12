@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreasureChest : MonoBehaviour
 {
     private Animator animator;
+    public float openDelay = 1f;
 
     private void Start()
     {
@@ -21,13 +23,21 @@ public class TreasureChest : MonoBehaviour
             animator.SetTrigger("Open");
 
             // Load the next level menu after the chest opens
-            Invoke("OpenNextLevelMenu", 1f); // Adjust delay for animation
+            StartCoroutine(LoadNextLevelMenu());
         }
     }
 
-    private void OpenNextLevelMenu()
+    /*private void OpenNextLevelMenu()
     {
         // Load the Next Level Menu
         UnityEngine.SceneManagement.SceneManager.LoadScene("NextLevelMenu");
+    }*/
+
+    private IEnumerator LoadNextLevelMenu() 
+    {
+        // Store the current level name in the static variable for the replay game option
+        GameOverMenu.lastLevelName = SceneManager.GetActiveScene().name;
+        yield return new WaitForSeconds(openDelay);
+        SceneManager.LoadScene("NextLevelMenu");
     }
 }
