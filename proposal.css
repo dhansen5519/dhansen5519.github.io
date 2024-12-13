@@ -7,7 +7,7 @@ body {
     color: #006400;
 }
 
-.proposal-container {
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 40px auto;
@@ -17,14 +17,14 @@ body {
     border-radius: 8px; 
 }
 
-.proposal-container h1 {
+h1 {
     font-size: 2.5rem;
     color: #006400;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.proposal-container h2 {
+h2 {
     font-size: 1.8rem;
     color: #006400;
     border-bottom: 2px solid #006400;
@@ -32,32 +32,32 @@ body {
     margin-bottom: 15px;
 }
 
-.proposal-container p {
+p {
     margin-bottom: 20px;
     font-size: 1rem;
     color: #006400; 
 }
 
-.proposal-container ul {
+ul {
     list-style-type: disc;
     margin-left: 20px;
     padding-left: 20px;
     color: #006400;
 }
 
-.proposal-container li {
+li {
     margin-bottom: 10px;
 }
 
-.proposal-container strong {
+strong {
     color: #006400; 
 }
 
-.proposal-container section {
+section {
     margin-bottom: 30px;
 }
 
-.proposal-container hr {
+hr {
     border: 0;
     height: 1px;
     background: #ddd;
