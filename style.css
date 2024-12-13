@@ -6,7 +6,7 @@ body {
 }
 
 background {
-    background-image: "C:PlatformerGame\Assets\bg_jungle.png";
+    background-image: url('PlatformerGame/Assets/bg_jungle.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
