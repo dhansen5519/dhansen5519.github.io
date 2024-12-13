@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.proposal-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.proposal-container h1 {
+    font-size: 2.5rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.proposal-container h2 {
+    font-size: 1.8rem;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.proposal-container p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.proposal-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555;
+}
+
+.proposal-container li {
+    margin-bottom: 10px;
+}
+
+.proposal-container strong {
+    color: #333;
+}
+
+.proposal-container hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+.proposal-container section {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .proposal-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .proposal-container h1 {
+        font-size: 2rem;
+    }
+
+    .proposal-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .proposal-container p,
+    .proposal-container li {
+        font-size: 0.9rem;
+    }
+}
