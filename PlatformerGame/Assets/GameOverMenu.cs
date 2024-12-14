@@ -7,7 +7,7 @@ public class GameOverMenu : MonoBehaviour
 {
     public static string lastLevelName; // Static variable to store the level name
 
-    // Function to retry the level
+    // Function will pull the name of the last level played and reload the same screen
     public void RetryLevel()
     {
         // Debugging tests

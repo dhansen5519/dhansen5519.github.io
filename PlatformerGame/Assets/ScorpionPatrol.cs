@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ScorpionPatrol : MonoBehaviour
 {
-    public float speed = 2f;
-    public Transform[] patrolPoints;
+    public float speed = 2f; // Speed of scorpion walking animation
+    public Transform[] patrolPoints;  // list of patrol points
     private int currentPoint = 0;
 
     private SpriteRenderer spriteRenderer; 
 
-    // Logic for checking if the scorpion is hit from above
+    // Header is the information that will appear in inspector
     [Header("Collision Settings")]
     public LayerMask playerLayer; // Layer for the player
     public float topHitOffset = 0.1f;
@@ -25,6 +25,8 @@ public class ScorpionPatrol : MonoBehaviour
         Patrol();
     }
 
+    // This function handles the patrol behavior of the scorpions.
+    // It includes the patrol points for the scorpions patrol range.
     private void Patrol()
     {
         if (patrolPoints.Length == 0) return;
@@ -58,6 +60,9 @@ public class ScorpionPatrol : MonoBehaviour
         }
     }
 
+    // This function detects when the player comes in contact wit the scorpion.
+    // If the player hits the front or back of the scorpion it will trigger character death.
+    // If the player hits the top of the scorpion the scorpion game object will destruct.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the object is the player
@@ -70,11 +75,13 @@ public class ScorpionPatrol : MonoBehaviour
             {
                 // Player hit the scorpion from above
                 Destroy(gameObject); // Destroy the scorpion
+                Debug.Log("Player killed scorpion");
             }
             else {
                 // Player hit the scorpion from the side
-                // Call a method to kill the player (e.g., respawn or end game)
+                // Call players die method
                 collision.collider.GetComponent<PlayerController>().Die();
+                Debug.Log("Scorpion killed player");
             }
         }
     }

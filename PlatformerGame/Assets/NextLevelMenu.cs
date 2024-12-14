@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelMenu : MonoBehaviour
 {
-    // Start next level
+    // This function loads the next level when a level is complete.
     public void NextLevel()
     {
         if (GameOverMenu.lastLevelName == "Level1") {
@@ -22,7 +22,7 @@ public class NextLevelMenu : MonoBehaviour
         }
     }
 
-    // Quit to main menu
+    // This function returns the screen to the main menu
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");

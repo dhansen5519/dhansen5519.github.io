@@ -8,6 +8,6 @@ public class MainMenu : MonoBehaviour
     // Function to load Level 1
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1"); // Replace "Level1" with the exact name of your first level
+        SceneManager.LoadScene("Level1"); 
     }
 }

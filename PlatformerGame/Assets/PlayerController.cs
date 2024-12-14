@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Move: handles horizontal movement using Unity’s Input.GetAxis("Horizontal")
+    // Move handles horizontal movement using Unity’s Input.GetAxis("Horizontal")
     // Returns values between -1 and 1 based on player input (left/right arrow keys)
     private void Move()
     {
@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scaler;
     }
 
+    // This function triggers the dath animation and brings up the game over menu
     public void Die()
     {
         if (isDead) return; // Prevent multiple triggers
@@ -113,6 +114,7 @@ public class PlayerController : MonoBehaviour
         rb.simulated = false; // Disables Rigidbody physics
 
         StartCoroutine(LoadGameOverMenu());
+        Debug.Log("Player has died");
 
     }
 

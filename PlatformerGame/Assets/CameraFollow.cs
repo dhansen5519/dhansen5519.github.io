@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     public Transform target; // Reference to the character
     public Vector3 offset;   // Offset for the camera position
 
+    // This function keeps the camera with the player when the player moves
     void Update()
     {
         // Update camera position based on the character's position and offset

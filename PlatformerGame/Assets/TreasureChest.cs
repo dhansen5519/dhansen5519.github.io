@@ -14,6 +14,7 @@ public class TreasureChest : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    // Triggers opening next level menu
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the player collided with the chest
@@ -26,12 +27,6 @@ public class TreasureChest : MonoBehaviour
             StartCoroutine(LoadNextLevelMenu());
         }
     }
-
-    /*private void OpenNextLevelMenu()
-    {
-        // Load the Next Level Menu
-        UnityEngine.SceneManagement.SceneManager.LoadScene("NextLevelMenu");
-    }*/
 
     private IEnumerator LoadNextLevelMenu() 
     {
