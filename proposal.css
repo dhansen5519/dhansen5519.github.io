@@ -83,3 +83,9 @@ hr {
         font-size: 0.9rem;
     }
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
