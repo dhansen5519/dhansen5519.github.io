@@ -26,7 +26,7 @@ Some future improvements I would like to implement include moving platforms, col
 This project was a valuable learning experience that introduced me to the Unity game engine and the fundamentals of 2D game development. Starting with no prior experience in Unity, I was able to build a functional 2D platformer game complete with character movement, enemies, multiple levels, and a basic menu system. While I encountered several challenges, such as managing colliders, implementing animations, and debugging code, these obstacles ultimately helped me develop problem-solving skills and a deeper understanding of Unity's tools and systems. One of the most significant takeaways from this project was the importance of hands-on practice. Experimenting with Unity's interface, scripting in C#, and troubleshooting issues allowed me to connect theoretical knowledge with practical application. This process reinforced the value of trial and error, persistence, and leveraging resources like documentation, discussion boards, and tutorials to overcome learning curves. Reflecting on the project's success, I achieved many of the goals I initially set out for myself, including creating a playable character, designing multiple levels, and implementing a working menu system. Although there are areas for improvement and features yet to be added, the progress I made represents a strong foundation for future projects. Overall, this project has not only introduced me to Unity but also instilled confidence in my ability to learn and adapt to new tools and technologies. It highlighted the significance of iteration and practice in mastering game development, and I look forward to building on this experience to create more complex and polished projects in the future.
 
 References
-[YouTube Tutorial](https://www.youtube.com/watch?v=OR0e-1UBEOU)
-[Zenva Tutorials](https://gamedevacademy.org/category/unity-tutorials/)
-[Unity Documentation](https://docs.unity3d.com/Manual/index.html)
-[Unity Scripting Documentation](https://docs.unity3d.com/ScriptReference/index.html)
+- [YouTube Tutorial](https://www.youtube.com/watch?v=OR0e-1UBEOU)
+- [Zenva Tutorials](https://gamedevacademy.org/category/unity-tutorials/)
+- [Unity Documentation](https://docs.unity3d.com/Manual/index.html)
+- [Unity Scripting Documentation](https://docs.unity3d.com/ScriptReference/index.html)
